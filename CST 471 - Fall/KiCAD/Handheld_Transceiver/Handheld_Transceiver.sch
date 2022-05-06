@@ -1,0 +1,279 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Handheld Rechargeable Raspberry Pi"
+Date "2020-12-06"
+Rev "1.0"
+Comp "Zak Rowland"
+Comment1 "Note: Touchscreen display connected via DSI."
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery BT1
+U 1 1 5FCC481B
+P 9450 2850
+F 0 "BT1" H 9558 2896 50  0000 L CNN
+F 1 "3.7V 4Ah" H 9558 2805 50  0000 L CNN
+F 2 "" V 9450 2910 50  0001 C CNN
+F 3 "~" V 9450 2910 50  0001 C CNN
+	1    9450 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Senior_Project:MakerFocus_Raspberry_Pi4_Battery_Pack_UPS U1
+U 1 1 5FCD8FC7
+P 8500 2350
+F 0 "U1" H 8500 2415 50  0000 C CNN
+F 1 "MakerFocus_Raspberry_Pi4_Battery_Pack_UPS" H 8500 2324 50  0000 C CNN
+F 2 "" H 8500 2350 50  0001 C CNN
+F 3 "" H 8500 2350 50  0001 C CNN
+	1    8500 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 2650 9450 2550
+Wire Wire Line
+	9450 2550 8900 2550
+Wire Wire Line
+	9450 3050 9050 3050
+Wire Wire Line
+	9050 3050 9050 2650
+Wire Wire Line
+	9050 2650 8900 2650
+Wire Wire Line
+	8100 2550 7300 2550
+Wire Wire Line
+	7300 2550 7300 2050
+NoConn ~ 8350 3450
+$Comp
+L power:GND #PWR?
+U 1 1 5FCE058D
+P 5300 6150
+F 0 "#PWR?" H 5300 5900 50  0001 C CNN
+F 1 "GND" H 5305 5977 50  0000 C CNN
+F 2 "" H 5300 6150 50  0001 C CNN
+F 3 "" H 5300 6150 50  0001 C CNN
+	1    5300 6150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4600 5850
+$Comp
+L power:GND #PWR?
+U 1 1 5FCE5592
+P 5800 5850
+F 0 "#PWR?" H 5800 5600 50  0001 C CNN
+F 1 "GND" V 5805 5722 50  0000 R CNN
+F 2 "" H 5800 5850 50  0001 C CNN
+F 3 "" H 5800 5850 50  0001 C CNN
+	1    5800 5850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Analog_ADC:MCP3002 U2
+U 1 1 5FCDC840
+P 5300 5650
+F 0 "U2" H 5700 6200 50  0000 C CNN
+F 1 "MCP3002" H 5700 6100 50  0000 C CNN
+F 2 "" H 5300 5550 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21294E.pdf" H 5300 5850 50  0001 C CNN
+	1    5300 5650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FCE3EA0
+P 5300 5150
+F 0 "#PWR?" H 5300 5000 50  0001 C CNN
+F 1 "+5V" H 5315 5323 50  0000 C CNN
+F 2 "" H 5300 5150 50  0001 C CNN
+F 3 "" H 5300 5150 50  0001 C CNN
+	1    5300 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3150 6550 4550
+Wire Wire Line
+	6550 4550 4400 4550
+Wire Wire Line
+	4400 4550 4400 5450
+Wire Wire Line
+	4400 5450 4600 5450
+Wire Wire Line
+	4350 3150 3600 3150
+Wire Wire Line
+	3600 3150 3600 5550
+Wire Wire Line
+	3600 5550 4600 5550
+$Comp
+L Device:R R1
+U 1 1 5FCEA14E
+P 2300 3350
+F 0 "R1" H 2370 3396 50  0000 L CNN
+F 1 "1KΩ" H 2370 3305 50  0000 L CNN
+F 2 "" V 2230 3350 50  0001 C CNN
+F 3 "~" H 2300 3350 50  0001 C CNN
+	1    2300 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5750 2300 5750
+Wire Wire Line
+	2300 5750 2300 3500
+Wire Wire Line
+	2300 3050 4350 3050
+$Comp
+L Device:R R2
+U 1 1 5FCECD82
+P 2300 2750
+F 0 "R2" H 2370 2796 50  0000 L CNN
+F 1 "2KΩ" H 2370 2705 50  0000 L CNN
+F 2 "" V 2230 2750 50  0001 C CNN
+F 3 "~" H 2300 2750 50  0001 C CNN
+	1    2300 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3200 2300 3050
+Wire Wire Line
+	2300 2900 2300 3050
+Connection ~ 2300 3050
+$Comp
+L power:GND #PWR?
+U 1 1 5FCEDF13
+P 2300 2600
+F 0 "#PWR?" H 2300 2350 50  0001 C CNN
+F 1 "GND" H 2305 2427 50  0000 C CNN
+F 2 "" H 2300 2600 50  0001 C CNN
+F 3 "" H 2300 2600 50  0001 C CNN
+	1    2300 2600
+	-1   0    0    1   
+$EndComp
+Connection ~ 9450 2550
+Wire Wire Line
+	9450 2550 10050 2550
+Wire Wire Line
+	10050 2550 10050 5450
+Wire Wire Line
+	10050 5450 5800 5450
+Wire Wire Line
+	6050 3150 6550 3150
+Wire Wire Line
+	7300 2050 6050 2050
+$Comp
+L Senior_Project:RaspberryPi4B-GPIO J1
+U 1 1 5FCC0321
+P 5200 1850
+F 0 "J1" H 5200 1915 50  0000 C CNN
+F 1 "RaspberryPi4B-GPIO" H 5200 1824 50  0000 C CNN
+F 2 "" H 5200 1850 50  0001 C CNN
+F 3 "" H 5200 1850 50  0001 C CNN
+	1    5200 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2650 8100 2650
+$Comp
+L Switch:SW_Push_LED SW1
+U 1 1 5FD0150E
+P 3350 2050
+F 0 "SW1" V 3300 1800 50  0000 L CNN
+F 1 "SW_Push_LED" V 3400 1450 50  0000 L CNN
+F 2 "" H 3350 2350 50  0001 C CNN
+F 3 "~" H 3350 2350 50  0001 C CNN
+	1    3350 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 2250 4350 2250
+Wire Wire Line
+	3450 1850 3450 1350
+Wire Wire Line
+	3450 1350 6500 1350
+Wire Wire Line
+	6500 1350 6500 2250
+Wire Wire Line
+	6500 2250 6050 2250
+$Comp
+L Device:R R3
+U 1 1 5FD0787D
+P 3800 2650
+F 0 "R3" V 3593 2650 50  0000 C CNN
+F 1 "1KΩ" V 3684 2650 50  0000 C CNN
+F 2 "" V 3730 2650 50  0001 C CNN
+F 3 "~" H 3800 2650 50  0001 C CNN
+	1    3800 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 2350 4100 2350
+Wire Wire Line
+	4100 2350 4100 2650
+Wire Wire Line
+	4100 2650 3950 2650
+Wire Wire Line
+	3650 2650 3350 2650
+Wire Wire Line
+	3350 2650 3350 2250
+$Comp
+L power:GND #PWR?
+U 1 1 5FD09CFB
+P 3350 1850
+F 0 "#PWR?" H 3350 1600 50  0001 C CNN
+F 1 "GND" H 3355 1677 50  0000 C CNN
+F 2 "" H 3350 1850 50  0001 C CNN
+F 3 "" H 3350 1850 50  0001 C CNN
+	1    3350 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 3450 8500 3700
+Wire Wire Line
+	8500 3700 7000 3700
+Wire Wire Line
+	7000 3700 7000 2350
+Wire Wire Line
+	7000 2350 6050 2350
+Wire Wire Line
+	8650 3450 8650 3800
+Wire Wire Line
+	8650 3800 6900 3800
+Wire Wire Line
+	6900 3800 6900 2450
+Wire Wire Line
+	6900 2450 6050 2450
+NoConn ~ 4350 2050
+NoConn ~ 4350 2150
+NoConn ~ 4350 2450
+NoConn ~ 4350 2550
+NoConn ~ 4350 2650
+NoConn ~ 4350 2750
+NoConn ~ 4350 2850
+NoConn ~ 4350 2950
+NoConn ~ 4350 3250
+NoConn ~ 4350 3350
+NoConn ~ 4350 3450
+NoConn ~ 4350 3550
+NoConn ~ 4350 3650
+NoConn ~ 4350 3750
+NoConn ~ 4350 3850
+NoConn ~ 4350 3950
+NoConn ~ 6050 3950
+NoConn ~ 6050 3850
+NoConn ~ 6050 3750
+NoConn ~ 6050 3650
+NoConn ~ 6050 3550
+NoConn ~ 6050 3450
+NoConn ~ 6050 3350
+NoConn ~ 6050 3250
+NoConn ~ 6050 3050
+NoConn ~ 6050 2950
+NoConn ~ 6050 2850
+NoConn ~ 6050 2750
+NoConn ~ 6050 2550
+NoConn ~ 6050 2150
+$EndSCHEMATC
